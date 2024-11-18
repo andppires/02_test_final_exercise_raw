@@ -1,65 +1,64 @@
-Instalação e execução do exemplo
-Este projeto demonstra um conjunto de testes automáticos utilizando Selenium WebDriver e pytest para testar funcionalidades de gestão de estudantes, cursos e disciplinas em um sistema web.
+# Projeto: Test Final Exercise
+Este repositório contém o código para o exercício final de testes automatizados, utilizando pytest e Behave. O projeto foi estruturado para demonstrar testes unitários e comportamentais em Python.
 
-Requisitos
-Python 3
-Google Chrome (ou outro navegador compatível com o Selenium)
-Passos para execução
-1. Criação de um Ambiente Virtual
-Crie um ambiente virtual (virtual environment) utilizando a sua versão padrão do Python:
+# Pré-requisitos
+Certifique-se de que o ambiente possui os seguintes itens instalados:
 
-bash
-Copiar código
-python3 -m venv venv
-2. Ativação do Ambiente Virtual
-Ative o ambiente virtual:
-
-No macOS/Linux:
-bash
-Copiar código
-source venv/bin/activate
-No Windows:
-bash
-Copiar código
-venv\Scripts\activate
-3. Instalação dos Requisitos
-Instale as dependências do projeto listadas no arquivo requirements.txt:
+Python (versão 3.8 ou superior)
+pip (gerenciador de pacotes do Python)
+Para verificar se estão instalados, execute no terminal:
 
 bash
 Copiar código
-pip install -r requirements.txt
-4. Execução do Teste
-Garanta que o Google Chrome esteja instalado na sua máquina, pois o Selenium precisará dele para executar os testes.
+python --version
+pip --version
+Além disso, instale as dependências necessárias do projeto.
 
-Em seguida, execute o teste de exemplo:
+# Instalação das Dependências
 
-bash
-Copiar código
-python -m pytest -k test_demo
-Os testes serão executados e a página será exibida no browser conforme os comandos do script.
+# Clone o repositório:
 
-5. Resultado dos Testes
-O teste simula interações como adicionar estudantes, cursos e disciplinas, além de inscrever estudantes nas disciplinas. O sistema será manipulado diretamente no navegador (Chrome) e as interações serão verificadas conforme os assertivos presentes no código.
+*git clone https://github.com/andppires/02_test_final_exercise_raw.git*
 
-Estrutura do Código
-O código utiliza a biblioteca Selenium WebDriver para controlar o navegador e interagir com a interface do sistema, e pytest para gerenciar e executar os testes. O comportamento esperado para cada ação (adicionar estudante, adicionar curso, etc.) é verificado por meio de asserções.
+# Acesse o diretório do projeto:
+cd 02_test_final_exercise_raw
 
-Funções principais:
-Adição de Estudante: Cria um novo estudante no sistema.
-Adição de Curso: Cria um novo curso no sistema.
-Inscrição em Curso: Inscreve um estudante em um curso.
-Adição de Disciplina: Cria uma nova disciplina e associa-a a um curso.
-Inscrição em Disciplina: Inscreve um estudante em uma disciplina.
-Cada uma dessas funções é invocada em sequência durante a execução do teste.
+# Instale as dependências do projeto:
+Utilize o comando abaixo para instalar as bibliotecas listadas no requirements.txt:
+*pip install -r requirements.txt*
 
-6. Exemplo de Teste
-O código executa um fluxo de testes onde são adicionados estudantes, cursos e disciplinas, e as inscrições são feitas da seguinte forma:
+# Executando os Testes
+Após configurar o ambiente, utilize os comandos abaixo para rodar os testes:
 
-Adicionar Estudante: O script adiciona um estudante chamado "douglas".
-Adicionar Curso: Um curso chamado "mat" é adicionado.
-Inscrição em Curso: O estudante "douglas" é inscrito no curso "mat".
-Adicionar Disciplina: A disciplina "mat" é criada para o curso "mat".
-Inscrição em Disciplina: O estudante "douglas" é inscrito nas disciplinas "mat", "port" e "geo".
-Verificações: A cada etapa, o script verifica se os elementos foram corretamente inseridos e exibidos na interface.
-7. Captura de Tela
-Durante a execução do teste, a página será manipulada conforme os comandos definidos no código, e você verá a interface sendo alterada.
+# Testes com pytest:
+
+Execute o comando para rodar os testes unitários:
+*python -m pytest test_final_exercise_raw.py*
+
+Este comando executará os testes presentes no arquivo test_final_exercise_raw.py e exibirá os resultados no terminal.
+
+# Testes com Behave:
+
+Execute o comando abaixo para rodar os testes comportamentais:
+*behave*
+
+Este comando executará os testes comportamentais definidos no diretório features/ (arquivo .feature).
+
+# Estrutura do Projeto
+# test_final_exercise_raw.py: 
+Arquivo contendo os testes unitários escritos com pytest.
+# features/: 
+Contém arquivos .feature e a implementação dos passos para testes comportamentais.
+# requirements.txt: 
+Lista as dependências necessárias para rodar o projeto.
+
+# Possíveis Problemas e Soluções
+
+# Erro: ModuleNotFoundError ao rodar os testes:
+Certifique-se de que instalou todas as dependências com o comando pip install -r requirements.txt.
+
+# Comando pytest ou behave não encontrado:
+Verifique se os pacotes estão instalados corretamente no ambiente. Reinstale com pip install pytest behave.
+
+# Testes falhando inesperadamente:
+Revise os cenários e as configurações iniciais no código para garantir que os testes estejam sendo executados no ambiente esperado.
