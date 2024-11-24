@@ -120,6 +120,7 @@ class TestDemo():
   def adicionar_estudante(self):
       self.driver.find_element(By.ID, "student-nome").click()
       self.driver.find_element(By.ID, "student-nome").send_keys("douglas")
+      sleep(10)
       self.driver.find_element(By.ID, "student-btn").click()
 
   def aguarda_elemento(self):

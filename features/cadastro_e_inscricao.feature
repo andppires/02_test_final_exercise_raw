@@ -8,11 +8,13 @@ Feature: Cadastro e Inscrição de Estudante, Curso e Disciplina
   Scenario: Criar cursos e verificar se os cursos foram adicionados
     Given que o usuário está na página principal
     When o usuário cria o curso "mat"
-    Then a mensagem "INFO Added student id: 1, Name: douglas" deve ser exibida para o curso "mat"
+    Then a mensagem "INFO Added course id: 1, Nome: mat" deve ser exibida para o curso "mat"
     
     When o usuário cria o curso "port"
+    Then a mensagem "INFO Added course id: 2, Nome: port" deve ser exibida para o curso "port"
+
     When o usuário cria o curso "geo"
-    Then a mensagem "INFO Added student id: 1, Name: douglas" deve ser exibida para o curso "port" e "geo"
+    Then a mensagem "INFO Added course id: 3, Nome: geo" deve ser exibida para o curso "geo"
 
   Scenario: Inscrever estudante em cursos e disciplinas
     Given que o usuário está na página de inscrição de cursos

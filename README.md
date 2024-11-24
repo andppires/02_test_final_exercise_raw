@@ -9,9 +9,9 @@ pip (gerenciador de pacotes do Python)
 Para verificar se estão instalados, execute no terminal:
 
 bash
-Copiar código
 python --version
 pip --version
+
 Além disso, instale as dependências necessárias do projeto.
 
 # Instalação das Dependências
@@ -22,6 +22,19 @@ Além disso, instale as dependências necessárias do projeto.
 
 # Acesse o diretório do projeto:
 cd 02_test_final_exercise_raw
+
+# Criação e ativação do ambiente virtual (opcional, mas recomendado):
+É recomendado usar um ambiente virtual para isolar as dependências do projeto. Para criar e ativar o ambiente virtual, execute:
+
+No Windows:
+
+python -m venv venv
+.\venv\Scripts\activate
+
+No macOS/Linux:
+
+python -m venv venv
+source venv/bin/activate
 
 # Instale as dependências do projeto:
 Utilize o comando abaixo para instalar as bibliotecas listadas no requirements.txt:
